@@ -195,6 +195,9 @@ header {
     url(../img/girlfieldsun.jpg);
 }
 
+.dark-text {
+  color: black;
+}
 header .header-content {
     position: relative;
     width: 100%;

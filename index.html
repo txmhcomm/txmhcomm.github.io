@@ -11,6 +11,7 @@
 
     <title>TXMHcomm</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
@@ -53,86 +54,48 @@
                 </div>
                 <div class="col-sm-2"></div>
                 <div class="col-sm-6">
-                  <div id="form" class="panel panel-default">
-                      <div class="panel-heading">
-                        <h3 class="panel-title">Join The Conversation!</h3>
-                      </div>
-                      <div class="panel-body">
-
-                        <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()" class="form-horizontal">
-                            <div class="form-group">
-                                <div>
-                                  <input id="name" type="text" name="name" class="form-control" placeholder="Name" aria-describedby="sizing-addon1">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div>
-                                  <input id="org" type="text" name="org" class="form-control" placeholder="Organization" aria-describedby="sizing-addon1">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div>
-                                  <input id="title" type="text" name="title" class="form-control" placeholder="Title" aria-describedby="sizing-addon1">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div>
-                                  <input id="email" type="text" name="email" class="form-control" placeholder="email" aria-describedby="sizing-addon1">
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: block; float: right;">
-                                <button id="send" type="submit"class="btn btn-primary btn-lg">
-                                    Join The Conversation
-                                </button>
-                            </div>
-                            <div style="width: 100%; display: block; float: right; padding-top: 15px;">
-                                <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
-                            </div>
-                        </form>
-                      </div>
-                      <!-- post to google sheet JavaScript -->
-                      <script type="text/javascript">
-                          function validateEmail(email) {
-                              var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                              return re.test(email);
-                          },
-                          function postContactToGoogle(){
-                              var name = $j('#name').val();
-                              var org = $j('#org').val();
-                              var title = $j('#title').val();
-                              var email = $j('#email').val();
-                              if ((name !== "") && (org !== "") && (title !== "") && (email !== "") && (validateEmail(email)))) {
-                                  $j.ajax({
-                                      url: "https://docs.google.com/forms/d/1gM7q4d857snppZuNury0uaqjG1DlvFDXQm06fUnMopc/formResponse",
-                                      data: {"entry_1639926205" : name, "entry_1263497969" : org, "entry_660592942": title, "entry_289483510": email},
-                                      type: "POST",
-                                      dataType: "xml",
-                                      statusCode: {
-                                          0: function (){
-
-                                              $j('#name').val("");
-                                              $j('#org').val("");
-                                              $j('#title').val("");
-                                              $j('#email').val("");
-
-                                              //Success message
-                                          },
-                                          200: function (){
-                                              $j('#name').val("");
-                                              $j('#org').val("");
-                                              $j('#title').val("");
-                                              $j('#email').val("");
-                                              //Success Message
-                                          }
-                                      }
-                                  });
-                              }
-                              else {
-                                  //Error message
-                              }
-                          }
-                      </script>
-                  </div> <!-- panel with form -->
+                  <div class="dark-text">
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                      #mc_embed_signup{background:#d35400; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                    <form action="//casa.us10.list-manage.com/subscribe/post?u=6faf1c819863500322ffcc7fa&amp;id=ab9cf0050d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                    	     <h2>Subscribe to our mailing list</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                    <div class="mc-field-group">
+                    	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                    </label>
+                    	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    </div>
+                    <div class="mc-field-group">
+                    	<label for="mce-NAME">Name </label>
+                    	<input type="text" value="" name="NAME" class="" id="mce-NAME">
+                    </div>
+                    <div class="mc-field-group">
+                    	<label for="mce-ORG">Organization </label>
+                    	<input type="text" value="" name="ORG" class="" id="mce-ORG">
+                    </div>
+                    <div class="mc-field-group">
+                    	<label for="mce-TITLE">Title </label>
+                    	<input type="text" value="" name="TITLE" class="" id="mce-TITLE">
+                    </div>
+                    	<div id="mce-responses" class="clear">
+                    		<div class="response" id="mce-error-response" style="display:none"></div>
+                    		<div class="response" id="mce-success-response" style="display:none"></div>
+                    	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_6faf1c819863500322ffcc7fa_ab9cf0050d" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[2]='ORG';ftypes[2]='text';fnames[3]='TITLE';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+                  </div>   <!-- dark-text -->
                 </div> <!-- container -->
               </div>
             </div><!-- container-fluid -->
