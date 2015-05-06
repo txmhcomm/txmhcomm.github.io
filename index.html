@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div style="width: 100%; display: block; float: right;">
-                                <button id="send" type="submit" class="btn btn-primary btn-lg" onclick="postContactToGoogle()">
+                                <button id="send" type="submit" onclick="postContactToGoogle()" class="btn btn-primary btn-lg" >
                                     Join The Conversation
                                 </button>
                             </div>
@@ -99,7 +99,7 @@
                               var email = $j('#email').val();
 
                                   $j.ajax({
-                                      url: "https://docs.google.com/forms/d/1gM7q4d857snppZuNury0uaqjG1DlvFDXQm06fUnMopc/formResponse",
+                                      url: "https://docs.google.com/forms/d/1gM7q4d857snppZuNury0uaqjG1DlvFDXQm06fUnMopc/viewform",
                                       data: {"entry_1639926205" : name, "entry_1263497969" : org, "entry_660592942": title, "entry_289483510": email},
                                       type: "POST",
                                       dataType: "xml",
